@@ -14,13 +14,13 @@ import numpy as np
 
 def download_data():
 
-    stock_list = pd.read_txt('C:/stoxx/raw_list.csv', sep=';', usecols=[0])
+    stock_list = pd.read_txt('PATH/stoxx/raw_list.csv', sep=';', usecols=[0])
     stock_list = stock_list.as_matrix()
 
     chrome_options = Options()  
     chrome_options.add_argument("--headless")  
 
-    mydriver = webdriver.Chrome(executable_path=os.path.abspath('C:/toolkits/chromedriver/chromedriver.exe'), chrome_options=chrome_options)
+    mydriver = webdriver.Chrome(executable_path=os.path.abspath('PATH/chromedriver/chromedriver.exe'), chrome_options=chrome_options)
 
     start_year = '2000'
     start_month = '01'
