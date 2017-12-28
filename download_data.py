@@ -14,7 +14,7 @@ import numpy as np
 
 def download_data():
 
-    stock_list = pd.read_txt('PATH/stoxx/raw_list.csv', sep=';', usecols=[0])
+    stock_list = pd.read_csv('PATH/stoxx/raw_list.csv', sep=';', usecols=[0])
     stock_list = stock_list.as_matrix()
 
     chrome_options = Options()  
